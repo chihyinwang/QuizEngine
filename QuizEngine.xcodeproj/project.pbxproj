@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		72C2608A24A5DE6F00918E81 /* QuizEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C2608024A5DE6F00918E81 /* QuizEngine.framework */; };
+		72C2609B24A5E43E00918E81 /* FlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2609A24A5E43E00918E81 /* FlowTest.swift */; };
+		72C2609D24A5E44800918E81 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2609C24A5E44800918E81 /* Flow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,8 @@
 		72C2608424A5DE6F00918E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72C2608924A5DE6F00918E81 /* QuizEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C2609024A5DE6F00918E81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72C2609A24A5E43E00918E81 /* FlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTest.swift; sourceTree = "<group>"; };
+		72C2609C24A5E44800918E81 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 		72C2608224A5DE6F00918E81 /* QuizEngine */ = {
 			isa = PBXGroup;
 			children = (
+				72C2609C24A5E44800918E81 /* Flow.swift */,
 				72C2608424A5DE6F00918E81 /* Info.plist */,
 			);
 			path = QuizEngine;
@@ -75,6 +80,7 @@
 		72C2608D24A5DE6F00918E81 /* QuizEngineTests */ = {
 			isa = PBXGroup;
 			children = (
+				72C2609A24A5E43E00918E81 /* FlowTest.swift */,
 				72C2609024A5DE6F00918E81 /* Info.plist */,
 			);
 			path = QuizEngineTests;
@@ -141,9 +147,11 @@
 				TargetAttributes = {
 					72C2607F24A5DE6F00918E81 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					72C2608824A5DE6F00918E81 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -188,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C2609D24A5E44800918E81 /* Flow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C2609B24A5E43E00918E81 /* FlowTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +341,7 @@
 		72C2609524A5DE6F00918E81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -348,6 +359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = chihyinwang.is.this.QuizEngine;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -355,6 +367,7 @@
 		72C2609624A5DE6F00918E81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -379,6 +392,8 @@
 		72C2609824A5DE6F00918E81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7L56KQ3ZU2;
@@ -390,6 +405,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = chihyinwang.is.this.QuizEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -397,6 +413,8 @@
 		72C2609924A5DE6F00918E81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7L56KQ3ZU2;
