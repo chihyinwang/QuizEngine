@@ -13,14 +13,6 @@ class FlowTest: XCTestCase {
     
     let router = RouterSpy()
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func test_start_withNoQuestions_doesNotRouteToQuestion() {
         makeSUT(questions: []).start()
         
@@ -134,22 +126,4 @@ class FlowTest: XCTestCase {
         return Flow(questions: questions, router: router, scoring: scoring)
     }
     
-    class RouterSpy: Router {
-        typealias Question = String
-        typealias Answer = String
-        
-        var routedQuestions: [Question] = []
-        var routedResult: Result<Question, Answer>? = nil
-        
-        var answerCallback: AnswerCallback = { _ in }
-        
-        func routeTo(question: Question, answerCallback: @escaping AnswerCallback) {
-            routedQuestions.append(question)
-            self.answerCallback = answerCallback
-        }
-        
-        func routeTo(result: Result<Question, Answer>) {
-            routedResult = result
-        }
-    }
 }
