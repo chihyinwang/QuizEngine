@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Flow <Question, Answer, R: Router> where R.Question == Question, R.Answer == Answer {
+class Flow <Question, Answer, R: Router> where R.QuestionType == Question, R.Answer == Answer {
     private let router: R
     private let questions: [Question]
     private var answers: [Question: Answer] = [:]

@@ -10,20 +10,20 @@ import XCTest
 import QuizEngine
 
 class RouterSpy: Router {
-    typealias Question = String
+    typealias QuestionType = String
     typealias Answer = String
     
-    var routedQuestions: [Question] = []
-    var routedResult: Result<Question, Answer>? = nil
+    var routedQuestions: [QuestionType] = []
+    var routedResult: Result<QuestionType, Answer>? = nil
     
     var answerCallback: AnswerCallback = { _ in }
     
-    func routeTo(question: Question, answerCallback: @escaping AnswerCallback) {
+    func routeTo(question: QuestionType, answerCallback: @escaping AnswerCallback) {
         routedQuestions.append(question)
         self.answerCallback = answerCallback
     }
     
-    func routeTo(result: Result<Question, Answer>) {
+    func routeTo(result: Result<QuestionType, Answer>) {
         routedResult = result
     }
 }
