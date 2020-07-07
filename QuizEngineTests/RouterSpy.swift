@@ -16,9 +16,9 @@ class RouterSpy: Router {
     var routedQuestions: [QuestionType] = []
     var routedResult: Result<QuestionType, Answer>? = nil
     
-    var answerCallback: AnswerCallback = { _ in }
+    var answerCallback: (String) -> Void = { _ in }
     
-    func routeTo(question: QuestionType, answerCallback: @escaping AnswerCallback) {
+    func routeTo(question: QuestionType, answerCallback: @escaping (String) -> Void) {
         routedQuestions.append(question)
         self.answerCallback = answerCallback
     }
