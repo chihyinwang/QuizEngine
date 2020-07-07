@@ -12,7 +12,6 @@ public protocol Router {
     associatedtype QuestionType: Hashable
     associatedtype Answer
     
-    typealias AnswerCallback = (Answer) -> Void
-    func routeTo(question: QuestionType, answerCallback: @escaping AnswerCallback)
+    func routeTo(question: QuestionType, answerCallback: @escaping (Answer) -> Void)
     func routeTo(result: Result<QuestionType, Answer>)
 }
